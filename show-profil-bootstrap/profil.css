@@ -1,0 +1,53 @@
+.manga{
+    background: #26AEDE;
+    width: 100%;
+    padding: 0px;
+    margin-top: 55px
+}
+
+.i {
+    color: rgb(246, 248, 250);
+    text-decoration: none;
+
+}
+
+.cc li{
+    font-size: 13px;
+    padding: 20px 0px;
+    margin-left: 55px;
+    text-decoration: underline;
+
+     
+}
+nav.bar{
+    width: 100%;
+}
+
+
+.i li{
+    width: 100%;
+    align-items: center;
+    
+}
+
+.cc{
+    display: flex;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    
+}
+
+/* Fin nva manga */
+
+
+.i{
+    margin-left: 55px;
+}
+/* nav  blue */
+.i li{
+    width: 100%;
+    align-items: center;
+   
+    
+}

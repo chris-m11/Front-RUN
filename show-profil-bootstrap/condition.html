@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="nom_de_heberg.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.tainer{
+    background: #26AEDE;
+    width: 100%;
+    padding: 0px;
+    margin-top: 66px;
+
+}
+ul.nu{
+    list-style-type:none;
+    margin-left: 22px;
+    margin-right: 50px;
+
+}
+
+.i {
+    color: rgb(241, 238, 235);
+    text-decoration: none;
+
+}
+
+.nu li{
+    font-size: 13px;
+    padding: 20px 0px;
+    margin-left: 69px;
+
+     
+}
+nav.bar{
+    width: 100%;
+}
+
+.nu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+/* nav  blue */
+.i li{
+    width: 100%;
+    align-items: center;
+    
+}
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 425px) {
+
+  .nu{
+    display: block;
+ 
+    padding-left: 0px;
+    margin-left: 0px;
+
+ 
+    
+    
+}
+.tainer{
+
+
+    font-family: 'Roboto', sans-serif;
+
+
+    background: #26AEDE;
+    width: 100%;
+    height: 300px;
+    padding: 0px;
+    margin-top: 66px;
+
+}
+
+  
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<header>
+    <nav class=" tainer">
+        <ul class="nu">
+            
+           <li class="i">
+          </svg> Nom et emplacement</li>
+            <li id="a"class="i">Configuration de l'hébergement</li>
+            <li id="b"class="i">Photo</li>
+            <li id="c"class="i">Tarifs et calendrier</li>
+            <li id="d"class="i">Révision et finalisation</li>
+            <li id="e"class="toggle"><span class="humber"></li>
+           
+            
+        </ul> 
+            
+        </nav>
+  
+
+</header>
+<body>
+    <main role="main" class="container">
+        <div class="jumbo">
+          <h5>Condition d'annulation</h5>
+          <p class="lead">Combien de jours avant leur arrivée les clients peuvent ils annuler leur réservation <br> gratuitement?</p><br><br>
+          <a class="btn btn-light" href="/docs/4.5/components/navbar/" role="button">1 Jours »</a>
+          <a class="btn btn-light" href="/docs/4.5/components/navbar/" role="button">7 Jours »</a>
+          <a class="btn btn-light" href="/docs/4.5/components/navbar/" role="button">14 Jours »</a>
+          <a class="btn btn-light" href="/docs/4.5/components/navbar/" role="button">30 Jours »</a>
+
+
+        </div>
+      </main>
+      <main role="main" class="container"> <br><br>
+        <div class="jumbo">
+          <h5> A quelle date souhaitez-vous ouvrir votre hébergement à la réservation</h5>
+          <p class="lead">Cliquez a chaque date individuellement.Tout les dates en blue sont disponible a la réservation. <br> Ne vous inquietez pas, vous
+              vous pouvez toujours ajouter ou supprimer des dates plus tard </p><br><br>
+          
+
+        </div>
+      </main>
+    
+
+
+    
+</body>
+
+
+
+
+<style>
+    .jumbo{
+        padding-top: 55px;
+    }
+    .lead{
+        font-size: 18px;
+    }
+</style>
+
+
+
+</html>

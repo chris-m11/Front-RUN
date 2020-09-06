@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="#">Top navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<main role="main" class="container">
+  <div class="jumbotron">
+
+    
+    <h5>infos personnelles</h5>
+    <span style="color: blue">Prénom et Nom</span>	
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Prénom et Nom</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+       <%= form_for(@user) do |f| %>
+    <%= f.text_field :name %><br><br>
+    <%= f.text_field :first_name %><br>
+    
+    
+    
+          </div>
+          <div class="modal-footer">
+            <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.name %> <%= @user.first_name%>
+    <% end %><br>
+    <!-- Modal 2 -->
+    
+    <span style="color: blue">Sexe</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong1">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sexe</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+    <%= form_for(@user) do |f| %>    
+    <%= f.text_field :sexe %><br>
+    
+          </div>
+          <div class="modal-footer">
+          <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.sexe%>
+    <% end %><br><br>
+    <span style="color: blue">Date de naissance</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong2">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Date de naissance</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <%= form_for(@user) do |f| %>
+            <%= f.date_field :date_of_birth	 %><br>
+        
+          </div>
+          <div class="modal-footer">
+           <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.date_of_birth%>
+    <% end %><br><br>
+    
+    <span style="color: blue">Adresse e-mail</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong3">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle3">Adresse e-mail</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <%= form_for(@user) do |f| %>    
+            <%= f.email_field :email %><br>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.email%>
+    <% end %><br><br>
+    
+    <span style="color: blue">Numéro de téléphone</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong4">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Numéro de téléphone</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <%= form_for(@user) do |f| %>    
+            <%= f.telephone_field :mobile %><br>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.mobile%>
+    <% end %><br><br>
+    
+    <span style="color: blue">Adresse</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong5">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Adresse</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <%= form_for(@user) do |f| %>    
+            <%= f.text_field :adresse %><br>
+    
+          </div>
+          <div class="modal-footer">
+        <%= f.submit 'Enregistrer', class:"btn btn-primary" %> 
+    </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.adresse%>
+    <% end %><br><br>
+    
+    <span style="color: blue">Numéro d'urgence</span>
+    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalLong6">Modifier</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle6" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Numéro d'urgence</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <%= form_for(@user) do |f| %>    
+            <%= f.telephone_field :urgence %><br>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit 'Enregistrer', class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <%= @user.urgence%>
+    <% end %>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
